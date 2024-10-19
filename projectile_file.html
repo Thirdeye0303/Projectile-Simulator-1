@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile Motion Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Projectile Motion Simulator</h1>
+        <h4>By: Aaranyadev Mukherjee, XI C</h4> <!-- Byline -->
+
+        <!-- Form for user input -->
+        <form id="motionForm">
+            <label for="velocity">Initial Velocity (m/s):</label>
+            <input type="number" id="velocity" name="velocity" required placeholder="Enter velocity">
+
+            <label for="angle">Launch Angle (degrees):</label>
+            <input type="number" id="angle" name="angle" required placeholder="Enter angle">
+
+            <button type="submit">Start Simulation</button>
+        </form>
+
+        <!-- Results section -->
+        <div class="results" id="results" style="display: none;">
+            <h2>Results:</h2>
+            <p id="timeOfAscent"></p>
+            <p id="timeOfDescent"></p>
+            <p id="totalTime"></p>
+            <p id="maxHeight"></p>
+            <p id="horizontalRange"></p>
+            <p id="velocityAtImpact"></p>
+        </div>
+
+        <!-- Real-time updates during animation -->
+        <div class="real-time-updates" id="realTimeUpdates" style="display: none;">
+            <h2>Real-Time Updates:</h2>
+            <p id="currentTime">Time: 0 s</p>
+            <p id="currentVelocity">Velocity: 0 m/s</p>
+            <p id="currentHeight">Height: 0 m</p>
+        </div>
+
+        <!-- Canvas for animation -->
+        <canvas id="simulationCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
